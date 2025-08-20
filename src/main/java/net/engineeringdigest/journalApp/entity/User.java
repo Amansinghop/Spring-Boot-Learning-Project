@@ -26,5 +26,9 @@ public class User {
     private String password;
     @DBRef
     List<BaseEntry> journalEntry= new ArrayList<>();
+    public List<BaseEntry> getJournalEntries() {
+        return journalEntry;
+    }
+
 
 }

@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin("localhost:5173/")
 @RequestMapping("/backend")
 public class BaseEntryControllerV2 {
 
@@ -22,6 +23,7 @@ public class BaseEntryControllerV2 {
     private  BaseEntryServise baseEntryServise;
     @Autowired
     private UserServise userServise;
+
 
     @GetMapping("{userName}")
     public ResponseEntity<List<BaseEntry>> getAll(@PathVariable String userName){
