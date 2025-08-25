@@ -35,10 +35,10 @@ public class BaseEntryServise {
     public List<BaseEntry> getEntry (){
         return baseEntryRepository.findAll();
     }
-    public Optional<BaseEntry> getEntryById (ObjectId myId){
+    public Optional<BaseEntry> getEntryById (String myId){
         return baseEntryRepository.findById(myId);
     }
-    public void deleteById(ObjectId myId, String userName){
+    public void deleteById(String myId, String userName){
         User user = userServise.findUserByUserName(userName);
         user.getJournalEntry().removeIf(x -> x.getId().equals(myId));
         baseEntryRepository.deleteById(myId);

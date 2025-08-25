@@ -18,7 +18,7 @@ import java.util.List;
 @NoArgsConstructor
 public class User {
     @Id
-    private ObjectId id;
+    private String id;
     @NonNull
     @Indexed(unique = true)
     private String userName;
